@@ -85,6 +85,13 @@ public abstract class Event {
         this.cost = cost;
     }
 
+    public void addParticipant(User participant) throws CanNotAddParticipantException{
+        if(participant.getRole() == User.Role.ADMIN || !isAvailable){
+            throw new CanNotAddParticipantException("Cannot add participant to participant list");
+        }
+        listOfParticipants.add(participant);
+    }
+
     @Override
     public int hashCode() {
         return (int) cost * 31 +

@@ -8,7 +8,7 @@ public class User {
     private String password;
     private PersonalInfo info;
 
-    User(){}
+    public User(){}
 
     public User(Role role, String login, String password) {
         this.role = role;
@@ -55,7 +55,7 @@ public class User {
         this.info = info;
     }
 
-    enum Role{
+    public enum Role{
         USER,ADMIN
     }
 
