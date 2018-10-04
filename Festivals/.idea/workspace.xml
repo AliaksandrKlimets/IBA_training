@@ -239,7 +239,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538637313754" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538637625339" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -277,12 +277,12 @@
       <updated>1538471110490</updated>
       <workItem from="1538471124141" duration="4268000" />
       <workItem from="1538486610546" duration="940000" />
-      <workItem from="1538636301259" duration="997000" />
+      <workItem from="1538636301259" duration="1308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6205000" />
+    <option name="totallyTimeSpent" value="6516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
