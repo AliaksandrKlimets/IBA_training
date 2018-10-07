@@ -7,9 +7,9 @@ import java.util.Date;
 import java.util.List;
 
 public class FoodFestival extends Event {
-    public FoodFestival(boolean isAvailable, String eventInfo, Date date,
+    public FoodFestival(String eventInfo, Date date,
                         List<User> listOfParticipants, List<Artist> listOfArtists, String place, double cost) {
-        super(isAvailable, eventInfo, date, listOfParticipants, listOfArtists, place, cost);
+        super(eventInfo, date, listOfParticipants, listOfArtists, place, cost);
     }
 
     public FoodFestival() {

@@ -68,9 +68,9 @@ public class PersonalInfo {
     @Override
     public String toString() {
         return "PersonalInfo[" +
-                "age= " + age +
-                ", name= " + name +
-                ", surname= " + surname +
-                ", phoneNumber= " + phoneNumber +"]";
+                "age = " + age +
+                ", name = " + name +
+                ", surname = " + surname +
+                ", phoneNumber = " + phoneNumber +"]";
     }
 }

@@ -3,12 +3,13 @@ package com.training.iba.entity.event;
 import com.training.iba.entity.Artist;
 import com.training.iba.entity.User;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
 public abstract class Event {
-    protected boolean isAvailable;
+    protected boolean isAvailable = true;
     protected String eventInfo;
     protected Date date;
     protected List<User> listOfParticipants;
@@ -16,8 +17,7 @@ public abstract class Event {
     protected String place;
     protected double cost;
 
-    public Event(boolean isAvailable, String eventInfo, Date date, List<User> listOfParticipants, List<Artist> listOfArtists, String place, double cost) {
-        this.isAvailable = isAvailable;
+    public Event(String eventInfo, Date date, List<User> listOfParticipants, List<Artist> listOfArtists, String place, double cost) {
         this.eventInfo = eventInfo;
         this.date = date;
         this.listOfParticipants = listOfParticipants;
@@ -27,6 +27,8 @@ public abstract class Event {
     }
 
     public Event() {
+        listOfParticipants = new ArrayList<>();
+        listOfArtists = new ArrayList<>();
     }
 
     public boolean isAvailable() {
@@ -85,8 +87,8 @@ public abstract class Event {
         this.cost = cost;
     }
 
-    public void addParticipant(User participant) throws CanNotAddParticipantException{
-        if(participant.getRole() == User.Role.ADMIN || !isAvailable){
+    public void addParticipant(User participant) throws CanNotAddParticipantException {
+        if (participant.getRole() == User.Role.ADMIN || !isAvailable) {
             throw new CanNotAddParticipantException("Cannot add participant to participant list");
         }
         listOfParticipants.add(participant);
@@ -110,7 +112,7 @@ public abstract class Event {
                 ", date=" + date +
                 ", listOfParticipants= " + listOfParticipants +
                 ", listOfArtists= " + listOfArtists +
-                ", place= " + place  +
+                ", place= " + place +
                 ", cost=" + cost + "]";
     }
 

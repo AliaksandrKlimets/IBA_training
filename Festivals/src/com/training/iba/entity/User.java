@@ -63,10 +63,10 @@ public class User {
     @Override
     public String toString() {
         return "User[" +
-                "role=" + role +
-                ", login= " + login +
-                ", password= " + password +
-                ", info= " + info + "]";
+                "role =" + role +
+                ", login = " + login +
+                ", password = " + password +
+                ", info = " + info + "]";
     }
 
     @Override

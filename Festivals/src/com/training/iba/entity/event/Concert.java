@@ -10,8 +10,8 @@ public class Concert extends Event {
     public Concert() {
     }
 
-    public Concert(boolean isAvailable, String eventInfo, Date date,
+    public Concert(String eventInfo, Date date,
                    List<User> listOfParticipants, List<Artist> listOfArtists, String place, double cost) {
-        super(isAvailable, eventInfo, date, listOfParticipants, listOfArtists, place, cost);
+        super( eventInfo, date, listOfParticipants, listOfArtists, place, cost);
     }
 }
