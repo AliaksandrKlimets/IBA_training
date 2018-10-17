@@ -1,6 +1,8 @@
 package com.training.iba.entity;
 
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PersonalInfo {
 
@@ -29,7 +31,9 @@ public class PersonalInfo {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) throws IllegalArgumentException{
+        if(!Pattern.compile("[A-ZА-Я][a-zа-я]{2,20}").matcher(name).
+                matches()) throw new IllegalArgumentException("Name is invalid");
         this.name = name;
     }
 
@@ -38,6 +42,8 @@ public class PersonalInfo {
     }
 
     public void setSurname(String surname) {
+        if(!Pattern.compile("[A-ZА-Я][a-zа-я]{2,20}").matcher(name).
+                matches()) throw new IllegalArgumentException("Surname is invalid");
         this.surname = surname;
     }
 
@@ -46,6 +52,8 @@ public class PersonalInfo {
     }
 
     public void setPhoneNumber(String phoneNumber) {
+        if(!Pattern.compile("(90 | \\+375)(29|33|44|25)\\d{7}").matcher(name).
+                matches()) throw new IllegalArgumentException("Phone is invalid");
         this.phoneNumber = phoneNumber;
     }
 

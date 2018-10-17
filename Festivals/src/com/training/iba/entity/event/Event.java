@@ -2,6 +2,7 @@ package com.training.iba.entity.event;
 
 import com.training.iba.entity.Artist;
 import com.training.iba.entity.User;
+import com.training.iba.entity.exception.CanNotAddParticipantException;
 
 import java.util.ArrayList;
 import java.util.Date;

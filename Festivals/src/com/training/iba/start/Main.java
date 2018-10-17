@@ -2,12 +2,9 @@ package com.training.iba.start;
 
 import com.training.iba.entity.PersonalInfo;
 import com.training.iba.entity.User;
-import com.training.iba.entity.event.CanNotAddParticipantException;
+import com.training.iba.entity.exception.CanNotAddParticipantException;
 import com.training.iba.entity.event.Concert;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
